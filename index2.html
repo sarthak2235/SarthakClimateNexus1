@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <section class="section">
+                <h2>About</h2>
+                <img src="profile_photo.jpg" alt="Profile Photo" class="profile-photo">
+                <p>I am a dedicated academic and climate scientist with profound expertise in atmospheric dynamics. My academic journey is highlighted by multiple publications and ongoing research projects that underscore my deep understanding of climate modeling and statistical climatology. Currently, I am an integral part of the Data61 team at CSIRO, applying my skills to enhance our knowledge of climate dynamics. I recently completed my Ph.D. at Monash University's School of Earth, Atmosphere, and Environment in Australia. My educational foundation includes a dual-degree (BS and MS) in Geosciences, which I earned from the Indian Institute of Science Education and Research, Kolkata, in 2019. This combination of practical experience and academic rigor equips me to make significant contributions to the field of climate science, driving forward our understanding and mitigation of climate change.</p>
+            </section>
+
+            <section class="section">
+                <h2>Recent Research Highlights</h2>
+                <div id="research-highlights">
+                    <div class="research-highlight">
+                        <h3>Australian Summer Monsoon Bursts; A Moist Static Energy Perspective</h3>
+                        <figure>
+                            <img src="monsoon1.jpg" alt="Monsoon Research">
+                        </figure>
+                        <p>The Australian Summer Monsoon (ASM) is associated with sequences of wet and dry conditions known as bursts and breaks during the extended summer months (October–April). Although understanding of these phenomena has progressed, there are still gaps in both our knowledge of the processes that produce bursts and our ability to predict their evolution. Energy budgets are evaluated in this study to gain insight into the key mechanisms involved in burst evolution. It is found that energy export/import via large-scale circulation is critical in determining the evolution of monsoon bursts. Furthermore, the research identifies various types of bursts, each with its own set of key mechanisms. These findings provide important insights into the dynamics of the ASM bursts and may help improve predictions of future bursts and breaks, allowing for better management of the region's agricultural and ecological systems.</p>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h3>Possible role of warming on Indian summer monsoon precipitation over the north-central Indian subcontinent</h3>
+                        <figure>
+                            <img src="monsoon2.jpg" alt="Indian Monsoon Research">
+                        </figure>
+                        <p>Broad disagreement between modelled and observed trends of Indian summer monsoon (ISM) over the north-central part of the Indian subcontinent (NCI) implies a gap in understanding of the relationship between the forcing factors and monsoonal precipitation. Although the strength of the land–sea thermal gradient (LSG) is believed to dictate monsoon intensity, its state and fate under continuous warming over the Bay of Bengal (BoB) and part of the NCI (23–28°N, 80–95°E) are less explored. Precipitation (1901–2017) and temperature data (1948–2017) at different vertical heights are used to understand the impact of warming in the ISM. In NCI, surface air temperature increased by 0.1–0.2°C decade-1, comparable to the global warming rate. The ISM precipitation prominently weakened and seasonality reduced after 1950, which is caused by a decrease in the LSG at the depth of the troposphere. Warming-induced increase in local convection over the BoB further reduced ISM precipitation over NCI.</p>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h3>Australian Summer Monsoon Rainfall: A Moist Static Energy Budget Perspective</h3>
+                        <figure>
+                            <img src="monsoon3.jpg" alt="Monsoon Rainfall Research">
+                        </figure>
+                        <p>The Australian summer monsoon (ASM) is a crucial component of Northern Australia's hydro-climate, impacting regions like the northern territory and northern Queensland. This study employs the moist static energy (MSE) budget and gross moist stability (GMS) to analyze the ASM's seasonal cycle and monsoon bursts—periods of heightened rainfall lasting one to two weeks. Our analysis reveals that while climate models capture the influence of moisture and energy import and export from adjacent regions, they struggle with quantitative accuracy. The models tend to overestimate GMS during convective periods due to a disproportionately strong upper-atmospheric ascent. This discrepancy highlights the limitations of evaluating models based solely on precipitation data. Further, we classify monsoon bursts into pre-monsoon, active, and post-monsoon phases using ERA5 and MERRA-II data, identifying distinct burst characteristics and their impact on seasonal rainfall patterns. Our findings indicate significant model variability in representing these bursts, suggesting that model-specific physics parameterizations contribute to these differences. Additionally, by comparing current climate conditions with a projected 4K increase in sea surface temperatures, we observe notable changes in burst frequency and precipitation dynamics, underscoring the models' sensitivity to warming scenarios. This study emphasizes the complexity of precipitation variability within the ASM and the importance of considering both thermodynamic and dynamic aspects of the moisture budget to understand monsoon behavior more effectively.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="social-media-strip">
+        <div class="social-media">
+            <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://researchgate.net" target="_blank"><img src="researchgate-icon.png" alt="ResearchGate"></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('header', { 
+                y: -100, 
+                opacity: 0, 
+                duration: 1, 
+                ease: 'power2.out' 
+            });
+
+            gsap.from('nav ul li', { 
+                y: 20, 
+                opacity: 0, 
+                duration: 0.8, 
+                stagger: 0.2, 
+                ease: 'power2.out' 
+            });
+
+            gsap.from('.section', { 
+                opacity: 0, 
+                y: 50, 
+                duration: 1, 
+                stagger: 0.3, 
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: '.main-content',
+                    start: 'top 80%'
+                }
+            });
+
+            gsap.from('.profile-photo', { 
+                opacity: 0, 
+                scale: 0.8, 
+                duration: 1, 
+                ease: 'back.out(1.7)',
+                scrollTrigger: {
+                    trigger: '.profile-photo',
+                    start: 'top 90%'
+                }
+            });
+
+            document.querySelectorAll('.research-highlight').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    gsap.to(item, { 
+                        scale: 1.02, 
+                        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.7)', 
+                        duration: 0.3 
+                    });
+                });
+                item.addEventListener('mouseleave', () => {
+                    gsap.to(item, { 
+                        scale: 1, 
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)', 
+                        duration: 0.3 
+                    });
+                });
+            });
+
+            gsap.from('.social-media a', { 
+                y: 20, 
+                opacity: 0, 
+                duration: 0.8, 
+                stagger: 0.2, 
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: '.social-media-strip',
+                    start: 'top 90%'
+                }
+            });
+
+            gsap.from('footer', { 
+                y: 50, 
+                opacity: 0, 
+                duration: 1, 
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: 'footer',
+                    start: 'top 90%'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box; /* Ensures padding doesn't affect the set dimensions */
+}
+
+/* Body and Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Dark background for the whole page */
+    color: #ddd; /* Light grey text for readability */
+    line-height: 1.6;
+}
+
+/* Container for content */
+.container {
+    max-width: 1200px; /* Sets the maximum width of the container */
+    margin: 10px auto; /* Centers the container horizontally */
+    padding: 0 20px; /* Adds padding inside the container */
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #222; /* Slightly lighter dark shade for the header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from nav links */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+    margin: 0 20px; /* Spacing between nav items */
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none; /* No underline */
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ee6e73; /* Highlight color on hover and for active link */
+}
+
+/* Main Content and Sections */
+.main-content, .social-media-strip {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222; /* Background color for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    padding-top: 40px; /* Add padding to the top of the container */
+    padding-left: 30px; /* Adjust padding as needed */
+    padding-right: 30px; /* Adjust padding as needed */
+}
+
+h2, h3 {
+    color: #ee6e73; /* Light red color for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+p {
+    color: #ccc;
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Research Highlights */
+#research-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 10px;
+    padding-top: 40px; /* Add padding to the top of the container */
+    padding-left: 30px; /* Adjust padding as needed */
+    padding-right: 30px; /* Adjust padding as needed */
+}
+
+.research-highlight {
+    flex: 1 1 calc(33.333% - 40px);
+    margin: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: calc(33.333% - 40px);
+}
+
+.research-highlight figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto; /* Center images in research highlights */
+}
+
+.research-highlight a {
+    color: blue; /* Blue color for unvisited links */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bounce effect */
+}
+
+.research-highlight a:visited {
+    color: #9ACD32; /* Keeps greenyellow color for visited links */
+}
+
+.research-highlight a:hover {
+    color: darkblue; /* Slightly darker blue when hovered for visual feedback */
+    transform: scale(1.1);
+}
+
+.research-highlight a:active {
+    color: navy; /* Changes to navy when actively clicked */
+}
+
+/* Research Interests */
+.interests-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between items */
+    align-items: flex-start; /* Aligns items at the top of the container */
+    text-align: center; /* Ensure container itself supports centering */
+}
+
+.interest-item {
+    flex: 1; /* Ensures all items take equal width */
+    text-align: center; /* Centers text and inline content within each item */
+    margin: 10px; /* Adds space around items */
+}
+
+.interest-item p {
+    margin-bottom: 10px; /* Space between the paragraph and the image */
+}
+
+.interest-item img {
+    width: 100%; /* Ensures the image fills the item width */
+    max-width: 300px; /* Limits image width for better control */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Covers the space, may crop the image */
+    display: block; /* Ensures image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Social Media Links */
+.social-media a {
+    display: inline-block;
+    margin: 0 15px; /* Space around social media icons */
+}
+
+.social-media-strip {
+    background-color: #333; /* Dark background for social media strip */
+    padding: 20px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #222; /* Footer background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+    border-radius: 50%; /* This makes the photo circular */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+    border: 3px solid #fff; /* Optional: adds a white border around the photo */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Optional: adds a shadow for depth */
+    display: block;
+    margin: 10px auto; /* Centers the photo horizontally within the section */
+}
+
+/* Divider */
+.divider {
+    height: 2px;
+    background-color: #444; /* A slightly lighter dark shade for the divider */
+    margin: 0 auto; /* Center the divider */
+    width: 80%; /* Width of the divider */
+}
+
+/* Publications Section */
+.publications-section {
+    max-width: auto; /* Adjust based on your layout needs */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    padding-top: 10px; /* Add padding to the top of the container */
+    padding-left: 30px; /* Adjust padding as needed */
+    padding-right: 30px; /* Adjust padding as needed */
+    padding-bottom: 10px;
+    background-color: #222; /* Background color for sections */
+}
+
+.publications-list {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.publications-list li {
+    margin-bottom: 10px; /* Adds space between entries */
+    margin-top: 10px; /* Adds space between entries */
+}
+
+.publications-list strong {
+    font-size: 1.1em; /* Makes the title stand out */
+}
+
+.publications-list em {
+    color: #555; /* Distinguishes the journal name and notes */
+    font-style: italic;
+}
+
+.publications-section h2 {
+    margin-bottom: 20px; /* Adds space below the section title */
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Increase vertical spacing for touch targets */
+    }
+
+    .interests-container {
+        /* On mobile, stack the interest items vertically */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .interest-item {
+        /* Allow each item to take the full width */
+        flex: 0 0 100%;
+        max-width: 100%; /* Make sure it doesn't exceed the screen width */
+        margin: 10px 0; /* Add vertical margin for spacing */
+    }
+
+    .interest-item img {
+        /* Adjust image size if necessary */
+        max-height: 200px; /* Set a max height for images on mobile */
+        width: auto; /* Adjust width to maintain aspect ratio */
+    }
+
+    /* Adjust footer social media links */
+    .social-media a img {
+        width: 23px; /* Adjust the icon size if needed */
+        height: 23px;
+    }
+
+    /* Any other mobile-specific adjustments */
+    /* ... */
+}
+
