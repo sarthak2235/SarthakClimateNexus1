@@ -1,0 +1,217 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* Body and Typography */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ee6e73;
+}
+
+/* Main Content and Sections */
+.main-content,
+.social-media-strip {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.section h2 {
+  color: #ee6e73;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(238, 110, 115, 0.6);
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ee6e73;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Social Media */
+.social-media a {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        display: block;
+        text-align: center;
+        width: 100%; /* Ensures tap area spans full width if needed */
+    }
+
+    .container {
+        padding: 0 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .interests-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .interest-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .interest-item img {
+        max-height: 200px;
+        width: auto;
+    }
+
+    .social-media a img {
+        width: 23px;
+        height: 23px;
+    }
+}

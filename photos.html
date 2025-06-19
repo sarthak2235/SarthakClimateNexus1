@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Scientist Website</title>
+  <link rel="stylesheet" href="styles_photos.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="photos.html" class="active">Photos</a></li>
+        <li><a href="#contact-info">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section class="section">
+      <h2>Travel & Moments Gallery</h2>
+      <div class="photo-grid">
+        <img src="P1.jpg" alt="Description of photo 1" />
+        <img src="P2.jpg" alt="Description of photo 2" />
+        <img src="P3.jpeg" alt="Description of photo 3" />
+        <img src="P4.jpeg" alt="Description of photo 4" />
+        <img src="P5.jpg" alt="Description of photo 5" />
+        <img src="P6.jpg" alt="Description of photo 6" />
+        <img src="P7.jpg" alt="Description of photo 7" />
+        <img src="P9.jpg" alt="Description of photo 8" />
+        <img src="P10.jpeg" alt="Description of photo 9" />
+        <img src="P11.jpeg" alt="Description of photo 10" />
+        <img src="P12.jpeg" alt="Description of photo 11" />
+        <img src="P13.jpeg" alt="Description of photo 12" />
+      </div>
+    </section>
+  </div>
+
+  <footer id="contact-info">
+    <div class="social-media">
+      <a href="mailto:sarthak2235@gmail.com" target="_blank"><img src="gmail.jpg" alt="Email" width="30" height="30" /></a>
+      <a href="https://www.linkedin.com/in/sarthak-mohanty-3b21b7126/" target="_blank"><img src="linkedin.jpg" alt="LinkedIn" width="30" height="30" /></a>
+      <a href="https://scholar.google.com/citations?user=yDTJW7AAAAAJ&hl=en&oi=sra" target="_blank"><img src="gs.png" alt="Google Scholar" width="30" height="30" /></a>
+      <a href="https://www.researchgate.net/profile/Sarthak-Mohanty" target="_blank"><img src="researchgate.png" alt="ResearchGate" width="30" height="30" /></a>
+      <a href="https://orcid.org/my-orcid?orcid=0000-0001-9712-498X" target="_blank"><img src="orcid.png" alt="ORCID" width="30" height="30" /></a>
+      <a href="https://www.facebook.com/profile.php?id=100005143696667" target="_blank"><img src="facebook.png" alt="Facebook" width="30" height="30" /></a>
+      <a href="https://www.instagram.com/sarthakmohanty_1/" target="_blank"><img src="instagram.png" alt="Instagram" width="30" height="30" /></a>
+    </div>
+  </footer>
+
+  <!-- Modal for full image view -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".photo-grid img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    modal.onclick = (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
